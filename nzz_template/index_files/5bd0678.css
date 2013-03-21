@@ -1,0 +1,93 @@
+body > header aside, #productnav, #mynzznav, #mainnav, #subnav, footer, article footer a, article footer .grid, #sitemap, .comments, .register, .advertisement, aside, #social-media-floater, .numOfComments, .article-full header h4, .message, .liveticker, #fancybox, .newsticker-list, .pagination { display:none; }
+.grid { padding:0px; }
+html, body { background:#ffffff; }
+body > header {
+  position:relative;
+  width:14cm;
+  min-width:inherit;
+  margin:0 auto;
+}
+div#title { width:100%; }
+div#title img {
+  width:4.37cm;
+  height:0.64cm;
+  margin:0 auto;
+  display:inline;
+  float:none;
+}
+div#title .onlyforprint {
+  display:block;
+  position:absolute;
+  font-family:Arial, sans-serif;
+  left:0cm;
+  top:0.7cm;
+  padding:0;
+  text-align:left;
+  font-size:8pt;
+  border-bottom:1px solid #1e1e1e;
+  z-index:3;
+  display:block;
+  width:4.5cm;
+}
+.white h1 {
+  position:absolute;
+  font-family:Arial, sans-serif;
+  right:0cm;
+  top:0.7cm;
+  padding:0;
+  text-align:right;
+  font-size:8pt;
+  border-bottom:1px solid #1e1e1e;
+  z-index:3;
+  display:block;
+  width:4.5cm;
+  margin:0px;
+}
+.white h1 a, .white h1 span {
+  margin:0px;
+  padding:0px;
+}
+.white h1 a.pulldown {
+  padding:0 0 0.05cm 0;
+  display:block;
+  background:none;
+}
+#main, #main > .sizeXl {
+  width:14cm;
+  margin:0 auto !important;
+  background:#ffffff;
+}
+figcaption span, figcaption small {
+  padding:0px;
+  font-size:8pt;
+  font-weight:normal;
+  float:none;
+  display:inline;
+}
+.article-full figure figcaption a { opacity:0.6; }
+figcaption { position:static; }
+.article-full address, .article-full p { font-size:10pt; }
+.article-full p.lead { font-size:13pt; }
+.article-full figure img, .article-full figure {
+  max-width:67.7mm;
+  height:auto;
+}
+article footer { display:block; }
+.article-full footer small {
+  text-transform:uppercase;
+  font-size:6pt;
+  opacity:0.6;
+}
+.article-full header time.onlyforprint {
+  display:block;
+  font-size:0.688em;
+  opacity:0.6;
+}
+#articleBodyText h4, #articleBodyText p { display:block !important; }
+#articleBodyText h4, .article-full h4 { font-family:Georgia, serif; }
+.article-full header h3 {
+  font-size:16pt;
+  margin:4.5mm 0;
+}
+.article-full figure a { text-align:left; }
+address a { color:#1e1e1e; }
