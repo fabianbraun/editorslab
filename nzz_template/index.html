@@ -554,23 +554,62 @@
 <div class="head-centering">
     <div class="page-title sizeXxxl"><h1>International migrations in Zürich</h1></div>
 </div>
-
-
 <div id="main" class="grid group">
     <div class="sizeXxxl">
+
+
+
+    <article class="article-full">
+        <h4>General description of the project</h4>
+        <p>The initial idea was to analyze and visualize data on people migrations to and out of Zürich. We found Open Government Data by Stadt Zürich (open to public) published from 1993 until 2011. We have decided to setup guidelines on how to analyze, model and aggregate raw data into a database. We analyzed different visualization tools (simple charts, chord charts and interactive JavaScript charts). To better propagete our development within NZZ web development team we have setup a project on GitHub. We have deployed our first working drafts of data visualization at http://fabianbraun.github.com/editorslab/nzz_template/. We followed NZZs style and guidelines for web pages. All text is taken from requirements description out of the project.</p>
+<br>
+
+
+        <h4>Detailed presentation of the graphic design of the project</h4>
+        We have collected one main data source from Open Government Data Stadt Zürich with info on persons migrations which stayed no longer than 4 years between 1993 to 2011 (http://data.stadt-zuerich.ch/content/portal/de/index/ogd/daten/wezg_ausl_ins_ausl_aufhdauer.html#description1). Data specifications are: year, duration of stay, age, country of origin, country of leave, city section, profession. We have imported the “flat” data from CSV into a MySQL database. Out of this normalized database we aggregated several specific CSVs for using in data visualization tools. The styling and colors are adapted to NZZs web page CI guidelines.
+
+        The first chart is a simple chart produced online with http://www.datawrapper.de. The data shows amount of persons sectioned in different professions and shown on a yearly time scale.
+
+
+        <br>
+        <br>
+
+
+
+
+
         <iframe src="//charts-datawrapper.s3.amazonaws.com/iFftS/index.html?rev=57" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="640" height="640"></iframe>
 
-        <article class="article-full">
+        <br>
+        <br>
 
+        The second chart was produced with interactive JavaScript charts from http://www.highcharts.com/. This chart displays total amount of people moving out of Zürich between 1993 and 2011. The data can be changed in scope by option “Nach 2000”, which shows data year >= 2000.
 
-            <script src="http://code.highcharts.com/highcharts.js"></script>
+<br>
+        <br>
+
+        <script src="http://code.highcharts.com/highcharts.js"></script>
             <script src="http://code.highcharts.com/modules/exporting.js"></script>
             <script src="http://code.highcharts.com/highcharts-more.js"></script>
             <script src="http://code.highcharts.com/modules/data.js"></script>
 
             <div id="container" style="min-width: 400px; height: 600px; margin: 0 auto"></div>
-            <div id="container1" style="min-width: 400px; height: 600px; margin: 0 auto"></div>
+<br>
+        <br>
 
+
+        The third chart was also produced with interactive JavaScript charts. This chart displays total amount of people moving out of Zürich between 1993 and 2011. The data can be changed in scope by option “Nach 2000”, which shows data year >= 2000.
+<br>
+        <br>
+
+        <div id="container1" style="min-width: 400px; height: 600px; margin: 0 auto"></div>
+
+
+        The fourth chart was produced with http://withbl.ocks.org/mbostock/1308257 as a chord chart. The chart displays peoples migration from one country to another. When hovering over a specific migration path the app shows the total amount of people which have migrated. The shown data is from 1993 to 2011. We have shortened the display data on countries specifications to >1’000 persons.
+
+
+<br>
+        <br>
 
             <script type="text/javascript">
                 $(function () {
@@ -786,7 +825,34 @@
             <iframe src="index2.html" width="1000" height="2000" style="border: none;"></iframe>
 
 
+        Detailed description of the editorial aspects of the project
+        As a next step we are focussing in developing an application which helps the editor to manage raw data (ODG) to be transformed into different CSVs as an automated input for specific data visualization tools. On the frontend part there should be a CSS/HTML page template which can be used in the content management system. The end result should be a “copy&paste” only application which will be used as a NZZ standard data visualization tool to aggretate and create HTML output which can be easily embedded into NZZs own content management system. Editors will be trained in using the tool and they will also receive an online training documentation for detailed application instructions. A first output will be a flow-story-telling web page (e.g. fukushima.nzz.ch) as a showcase for data journalism.
+        Planning of the production of the project
+        Since we are working heavily based an agile and lean methods this project also will lead into our Scrum project management system. The following steps needs to be fulfilled:
+        <br> <br> <br>
+        1. Create business plan and define stakeholder and sponsor (probably chief editor). <br>
+        2. Create detailed concept (requirements analysis, workflow description, CMS integration, template description and first time/cost/ressource evaluation. <br>
+        3. Define user stories out of detailed concept. Every story will be managed within out ticketing system. <br>
+        4. Estimate user stories, prioritize ticket and define first sprint release package (2 week duration). <br>
+        6. Develop application and test integration of app, CMS and template. <br>
+        6. At end of each sprint every realized ticket will be demoed to stakeholder/sponsor. <br>
+        7. At end of project timeline (n sprints) app will go onto production and final training with editors will be held. <br>
+        8. Launch production of first data journalism project. <br>
+        9. Setup process for follow-up data journalism project. <br>
+
+        <br><br>
+
+        <img src="migration1.png">
+        <br>
+        <img src="migration2.png">
+
+        <br><br><br>
+
         </article>
+
+
+
+
         <!-- End of JavaScript Tag --></div>
     <!-- END div.sizeXXl --></div>
 <footer>
