@@ -552,23 +552,92 @@
 </div>
 </div>
 <div class="head-centering">
-    <div class="page-title sizeXxxl"><h1>Editorslab</h1></div>
+    <div class="page-title sizeXxxl"><h1>International migrations in Zürich</h1></div>
 </div>
 <div id="main" class="grid group">
     <div class="sizeXxxl">
         <article class="article-full">
-            <div>
-                <h4>Editors Lab</h4>
-            </div>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-            sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
+
+
+            <script src="http://code.highcharts.com/highcharts.js"></script>
+            <script src="http://code.highcharts.com/modules/exporting.js"></script>
+            <script src="http://code.highcharts.com/highcharts-more.js"></script>
+            <script src="http://code.highcharts.com/modules/data.js"></script>
+
+            <div id="container" style="min-width: 400px; height: 600px; margin: 0 auto"></div>
+
+            <script type="text/javascript">
+                $(function () {
+                    var chart;
+                    $(document).ready(function () {
+                        chart = new Highcharts.Chart({
+                            chart: {
+                                renderTo: 'container',
+                                type: 'column',
+                                polar: true
+                            },
+                            title: {
+                                text: 'Auswanderungen aus Zürich'
+                            },
+                            xAxis: {
+                                categories: [
+                                    'Deutschland',
+                                    'Frankreich',
+                                    'Grossbritannien',
+                                    'Indien',
+                                    'Italien',
+                                    'Jugoslawien',
+                                    'Mazedonien',
+                                    'Österreich',
+                                    'Ausland unbekannt',
+                                    'Portugal',
+                                    'Spanien',
+                                    'USA', ],
+                                title: {
+                                    text: null
+                                }
+                            },
+                            yAxis: {
+                                min: 0,
+
+                                labels: {
+                                    overflow: 'justify'
+                                }
+                            },
+                            tooltip: {
+                                formatter: function () {
+                                    return '' +
+                                            this.series.name + ': ' + this.y + ' Personen';
+                                }
+                            },
+
+
+                            credits: {
+                                enabled: false
+                            },
+                            series: [
+                                {
+                                    name: 'Total',
+                                    data: [30573, 2774, 3949, 4974, 5066, 5299, 2117, 3831, 2165, 7168, 3833, 4944]
+                                },
+                                {
+                                    name: 'Nach 2000',
+                                    data: [133, 156, 107, 31, 635, 203, 2, 107, 947, 408, 6]
+                                }
+                            ]
+                        });
+                    });
+                });
+            </script>
+
+
+
+
+
+            <!-- second table -->
+
+
+
 
         </article>
         <!-- End of JavaScript Tag --></div>
